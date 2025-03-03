@@ -14,8 +14,8 @@ Notice that `|val|` denotes the absolute value of `val`.
 ### Example 1:  
 
 Input: nums = `[3, 1, 4, 1, 5]`, k = 2, s = 8 
-Output: 1  
-Explanation: There is only one 2-diff pair in the array with sum ≤ 8: (3, 5).  
+Output: 2  
+Explanation: There is only one 2-diff pair in the array with sum ≤ 8: (3, 5) and (1,3). 
 
 ---
 ### Example 2:  
