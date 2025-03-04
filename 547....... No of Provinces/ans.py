@@ -1,11 +1,12 @@
 def dfs(i, isConnected, visited, c):
-    c[0] += 1
     visited[i] = True
+    c[0] += 1
     for j in range(len(isConnected)):
         if i != j and isConnected[i][j] == 1 and not visited[j]:
             dfs(j, isConnected, visited, c)
 
-def findProvinces(isConnected, k):
+
+def findCircleNum(isConnected, k):
     cities = len(isConnected)
     visited = [False] * cities
     provinces = 0
@@ -20,8 +21,15 @@ def findProvinces(isConnected, k):
     return provinces
 
 
-n, k = map(int, input().split())
+def solve():
+    n, m = map(int, input().split())
+    isConnected = [list(map(int, input().split())) for _ in range(n)]
 
-isConnected = [list(map(int, input().split())) for _ in range(n)]
+    k = int(input())
+    print(findCircleNum(isConnected, k))
 
-print(findProvinces(isConnected, k))
+
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+        solve()
